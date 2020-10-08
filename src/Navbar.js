@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import './Navbar.css';
 class Navbar extends Component {
+    constructor(props){
+        super(props);
+        // this.state = { format : "hex"};
+        this.handleChange = this.handleChange.bind(this);
+    }
+    handleChange(evt){
+        // this.setState({format : evt.target.value});
+        this.props.changeFormat(evt.target.value);
+    }
     render() {
         return (
             <header className='Navbar'>
@@ -21,7 +32,13 @@ class Navbar extends Component {
                         />
                     </div>
                 </div>
-                    
+                <div className="select-container">
+                    <Select value={this.props.format} onChange={this.handleChange}>
+                        <MenuItem value='hex'>HEX - #ffffff</MenuItem>
+                        <MenuItem value='rgb'>RGB - rgb(255,255,255)</MenuItem>
+                        <MenuItem value='rgba'>RGBA - rgba(255,255,255,1.0)</MenuItem>
+                    </Select>
+                </div>    
                 
 
             </header>
