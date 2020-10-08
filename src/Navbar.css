@@ -46,5 +46,6 @@
     margin-top: -3px;
 }
 .select-container{
-    justify-self: end;
+    margin-left: auto;
+    margin-right: 1rem;
 }

@@ -30,7 +30,11 @@ class Palette extends Component{
         return(
             <div className='Palette'>
             {/* navbar */}
-                <Navbar level={this.state.level} changeLevel={this.changeLevel} changeFormat={this.changeFormat} format={this.state.format} />
+                <Navbar level={this.state.level} 
+                        changeLevel={this.changeLevel} 
+                        changeFormat={this.changeFormat} 
+                        format={this.state.format} 
+                />
                 
                 <div className='Palette-colors'>
                     {colorBoxes}
