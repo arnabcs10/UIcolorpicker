@@ -6,13 +6,13 @@ import MiniPalette from './MiniPalette';
 const styles = {
     root:{
         backgroundColor:"blue",
-        height:"100%",
+        height:"100vh",
         display:"flex",
         justifyContent:"center",
         alignItems:"flex-start"
     },
     container:{
-        width:"50%",
+        width:"75%",
         display:"flex",
         flexDirection:"column",
         alignItems:"flex-start",
