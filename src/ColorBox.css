@@ -7,7 +7,7 @@
     cursor: pointer;
     margin-bottom: -4px;
 } */
-.copy-button,
+/* .copy-button,
 .back-button{
     width: 100px;
     height: 30px;
@@ -31,7 +31,7 @@
 .back-button{
     opacity:1;
     text-decoration: none;
-}
+} */
 /* .ColorBox:hover .copy-button{
     opacity: 1;
     transition: 0.5s;
@@ -126,6 +126,6 @@
     height: 50%;
 } */
 
-.ColorBox.go-back{
+/* .ColorBox.go-back{
     background-color: black;
-}
+} */
