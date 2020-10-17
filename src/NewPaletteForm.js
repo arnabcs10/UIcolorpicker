@@ -8,11 +8,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import {ChromePicker} from 'react-color';
 
-
-const drawerWidth = 240;
+const drawerWidth = 400;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,6 +70,14 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  // container:{
+  //   // textAlign:"center"
+  //   height:"100%",
+  //   display:"flex",
+  //   flexDirection:"column",
+  //   alignItems:"center",
+  //   justifyContent:"space-around"
+  // }
 }));
 
 export default function NewPaletteForm() {
@@ -117,13 +126,26 @@ export default function NewPaletteForm() {
           paper: classes.drawerPaper,
         }}
       >
-        <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </div>
-        <Divider />
         
+            <div className={classes.drawerHeader}>
+              <IconButton onClick={handleDrawerClose}>
+                <ChevronLeftIcon />
+              </IconButton>
+            </div>
+            <Divider />
+            {/* <div className={classes.container}> */}
+            <Typography variant='h4'>
+              Design Your Palette
+            </Typography>
+            <div>
+              <Button variant="contained" color="secondary">Clear</Button>
+              <Button variant="contained" color="primary">Random Color</Button>
+            </div>
+            <ChromePicker color="purple" onChangeComplete={(newColor)=>
+                console.log(newColor)
+            }/>
+            <Button variant="contained" color="primary">Add Color</Button>
+        {/* </div> */}
       </Drawer>
       <main
         className={clsx(classes.content, {
@@ -131,6 +153,7 @@ export default function NewPaletteForm() {
         })}
       >
         <div className={classes.drawerHeader} />
+        
         
       </main>
     </div>
