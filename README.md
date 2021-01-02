@@ -1,4 +1,4 @@
-# Uicolorpicker
+# UIcolorpicker
 
  A web app that displays amazing color palettes for building project user interface development.
 
